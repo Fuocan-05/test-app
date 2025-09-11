@@ -1,0 +1,96 @@
+.my-image {
+    max-width: 150px;
+    height: auto;
+    margin: 2% 2% 2% 0;
+    border-radius: 50px;
+    box-shadow: 0px 0px 7px 1px #888;
+}
+
+.hero-section {
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  width: 40rem;
+  max-width: 400px;
+  margin-top: 0%;
+  margin-left: 15%;
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: white;
+}
+
+/* Stile di base per la linea orizzontale */
+
+hr {
+  border: none; /* Rimuove il bordo predefinito del browser */
+  height: 1px; /* Imposta lo spessore della linea */
+  background-color: #888; /* Colore grigio chiaro, puoi cambiarlo a tuo piacimento */
+  margin-top: 20px; /* Aggiunge spazio sopra la linea */
+  margin-bottom: 20px; /* Aggiunge spazio sotto la linea */
+}
+
+.sub-text {
+    color: #ccc;
+}
+
+.custom-tall-card {
+  width: 100%;
+  max-width: 220px;
+  min-width: 180px;
+  height: auto;
+  margin: 0 auto 2rem auto; /* aggiunge spazio sotto e centra la card */
+  padding: 1rem; /* aggiunge spazio interno */
+}
+
+.wide-tall-card {
+  width: 100%;
+  max-width: 650px;
+  min-width: 250px;
+  height: auto;
+  margin: 0 auto 2rem auto; /* aggiunge spazio sotto e centra la card */
+  padding: 1rem; /* aggiunge spazio interno */
+}
+
+/* Offset per ancore interne */
+[id] {
+  scroll-margin-top: 100px; /* Cambia 60px con l'altezza del tuo header o lo spazio desiderato */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .wide-tall-card,
+  .custom-tall-card {
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    margin-bottom: 1.5rem; /* spazio tra le card */
+    padding: 0.5rem; /* spazio interno ridotto su mobile */
+  }
+  .my-image {
+    max-width: 100px;
+    margin: 4% 4% 4% 0;
+  }
+  .card-body {
+    padding: 0.5rem;
+  }
+}
+
+/* Migliora la disposizione su mobile */
+@media (max-width: 768px) {
+  .wide-tall-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .custom-tall-card {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    align-items: flex-start !important;
+  }
+}

@@ -1,10 +1,7 @@
-.fade-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-section.show {
-  opacity: 1;
-  transform: translateY(0);
+hr {
+  border: none; /* Rimuove il bordo predefinito del browser */
+  height: 1px; /* Imposta lo spessore della linea */
+  background-color: #888; /* Colore grigio chiaro, puoi cambiarlo a tuo piacimento */
+  margin-top: 20px; /* Aggiunge spazio sopra la linea */
+  margin-bottom: 20px; /* Aggiunge spazio sotto la linea */
 }
