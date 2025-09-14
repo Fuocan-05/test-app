@@ -1,96 +1,63 @@
+/* Immagini */
 .my-image {
-    max-width: 150px;
-    height: auto;
-    margin: 2% 2% 2% 0;
-    border-radius: 50px;
-    box-shadow: 0px 0px 7px 1px #888;
+  max-width: 150px;
+  height: 150px;
+  margin: 2% 2% 2% 0;
+  border-radius: 50px;
+  box-shadow: 0px 0px 7px 1px #888;
+  align-self: center;
 }
 
-.hero-section {
-  height: 100vh;
-  flex-wrap: wrap;
-}
-
-.hero-card {
-  width: 40rem;
-  max-width: 400px;
-  margin-top: 0%;
-  margin-left: 15%;
+/* Card principale dei progetti */
+.project-card {
   border-radius: 20px;
   border-width: 2px;
   border-color: white;
+  max-width: 1000px;   /* larghezza massima */
+  margin: 0 auto 2rem auto; /* centra e aggiunge spazio sotto */
+  padding: 1rem;
 }
 
-/* Stile di base per la linea orizzontale */
-
+/* Linea divisoria */
 hr {
-  border: none; /* Rimuove il bordo predefinito del browser */
-  height: 1px; /* Imposta lo spessore della linea */
-  background-color: #888; /* Colore grigio chiaro, puoi cambiarlo a tuo piacimento */
-  margin-top: 20px; /* Aggiunge spazio sopra la linea */
-  margin-bottom: 20px; /* Aggiunge spazio sotto la linea */
+  border: none;
+  height: 1px;
+  background-color: #888;
+  margin: 20px 0;
 }
 
+/* Testo secondario (competenze) */
 .sub-text {
-    color: #ccc;
-}
-
-.custom-tall-card {
-  width: 100%;
-  max-width: 220px;
-  min-width: 180px;
-  height: auto;
-  margin: 0 auto 2rem auto; /* aggiunge spazio sotto e centra la card */
-  padding: 1rem; /* aggiunge spazio interno */
-}
-
-.wide-tall-card {
-  width: 100%;
-  max-width: 650px;
-  min-width: 250px;
-  height: auto;
-  margin: 0 auto 2rem auto; /* aggiunge spazio sotto e centra la card */
-  padding: 1rem; /* aggiunge spazio interno */
+  color: #959191;   /* più leggibile di #ccc */
+  font-size: 0.95rem;
 }
 
 /* Offset per ancore interne */
 [id] {
-  scroll-margin-top: 100px; /* Cambia 60px con l'altezza del tuo header o lo spazio desiderato */
+  scroll-margin-top: 100px;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .project-card {
+    padding: 0.75rem;
   }
-  .wide-tall-card,
-  .custom-tall-card {
-    max-width: 100%;
-    min-width: 0;
-    height: auto;
-    margin-bottom: 1.5rem; /* spazio tra le card */
-    padding: 0.5rem; /* spazio interno ridotto su mobile */
-  }
+
   .my-image {
     max-width: 100px;
     margin: 4% 4% 4% 0;
   }
+
   .card-body {
     padding: 0.5rem;
   }
-}
 
-/* Migliora la disposizione su mobile */
-@media (max-width: 768px) {
-  .wide-tall-card {
+  /* Layout verticale su mobile */
+  .row {
     flex-direction: column !important;
-    align-items: stretch !important;
   }
-  .custom-tall-card {
-    width: 100%;
-    max-width: 100%;
+
+  .col-12.col-md-4 {
     margin-top: 1rem;
-    margin-bottom: 0;
-    align-items: flex-start !important;
   }
 }
