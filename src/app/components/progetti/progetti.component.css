@@ -41,20 +41,38 @@ hr {
 @media (max-width: 768px) {
   .project-card {
     padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .col-12,
+  .col-md-8,
+  .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .my-image {
-    max-width: 100px;
-    margin: 4% 4% 4% 0;
+    margin: 8% auto 4% auto !important; /* aumenta il margine sopra */
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   .card-body {
     padding: 0.5rem;
-  }
-
-  /* Layout verticale su mobile */
-  .row {
-    flex-direction: column !important;
+    width: 100%;
+    text-align: center;
   }
 
   .col-12.col-md-4 {
