@@ -1,4 +1,4 @@
-  <h1 style="text-align: center; margin: 2%;">Per contattarmi</h1>
+<h1 style="text-align: center; margin: 2%;">Per contattarmi</h1>
   <hr>
 <div class="container p-4 border rounded shadow">
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
@@ -27,6 +27,8 @@
       <textarea id="messaggio" rows="5" class="form-control" name="messaggio"
         [(ngModel)]="formData.messaggio" required></textarea>
     </div>
+
+    <input type="text" name="honeypot" [(ngModel)]="formData.honeypot" style="display:none" tabindex="-1" autocomplete="off">
 
     <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Invia</button>
   </form>

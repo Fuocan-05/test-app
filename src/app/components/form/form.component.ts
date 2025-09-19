@@ -15,11 +15,16 @@ export class FormComponent {
     cognome: '',
     email: '',
     telefono: '',
-    messaggio: ''
+    messaggio: '',
+    honeypot: '' // aggiunto honeypot
   };
 
   onSubmit(f: NgForm) {
     if (f.invalid) return;
+    if (this.formData.honeypot) { // controllo honeypot
+      alert('Invio bloccato: comportamento sospetto.');
+      return;
+    }
     emailjs.send('Form_xxr132', 'template_748ghre', this.formData, 'eKzcsP02sexI8WVmk')
       .then(() => {
         alert('Email inviata');
